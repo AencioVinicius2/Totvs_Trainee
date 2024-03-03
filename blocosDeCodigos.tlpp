@@ -1,0 +1,18 @@
+#include 'totvs.ch'
+
+Function U_BLOCO_DE_CODIGOS
+
+   Local bBlocoExemplo := {|cTexto, cTitulo| fwAlertInfo(cTexto, cTitulo)} ; 
+   as codeblock
+
+   eval(bBlocoExemplo, "Esse eh um texto de exemplo", "esse  eh o titulo da janela")
+
+   executar(bBlocoExemplo, "Esse eh outro exemplo", "Com outro titulo")
+
+Return
+
+Static Function executar(xParam as variadic) 
+
+    eval(xParam:vArgs[1],xParam:vArgs[2],xParam:vArgs[3])
+
+Return

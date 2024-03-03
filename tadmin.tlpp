@@ -1,0 +1,19 @@
+#INCLUDE "totvs.ch"
+
+/*/{Protheus.doc} User Function nomeFunction
+    (long_description)
+    @type  Function
+    @author user
+    @since 10/01/2024
+    @version version
+    @param paraxm_name, param_type, param_descr
+    @return return_var, return_type, return_description
+    @example
+    (examples)
+    @see (links_or_references)
+    /*/
+User Function TADMIN()
+
+ChKFile("SZ0")
+    
+Return Nil

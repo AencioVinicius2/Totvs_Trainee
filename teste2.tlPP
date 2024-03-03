@@ -1,0 +1,20 @@
+//-AREA DE DIRETIVAS DE COMPILACAO
+#include 'totvs.ch'
+#include 'fwmvcdef.ch'
+
+/*/{Protheus.doc} User Function TESTE
+
+    (long_description)
+    @type  Function
+    @author Aencio Vinicius
+    @since 19/01/2024
+    @version 1.0
+    @param param_name, param_type, param_descr
+    @return return_var, return_type, return_description
+    @example
+    (examples)
+    @see (links_or_references)
+    /*/
+User Function TESTE(param_name)
+    
+Return return_var

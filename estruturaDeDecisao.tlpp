@@ -1,0 +1,45 @@
+#include 'totvs.ch'
+
+/*/{Protheus.doc} ESTRUTURA_DE_DECISAO
+(long_description)
+@type user function
+@author Aencio
+@since 25/01/2024
+/*/
+User Function ESTRUTURA_DE_DECISAO
+
+    Local primeiroNumero := 10 as integer 
+    Local segundoNumero := 20 as integer 
+    Local somaNumeros := 0
+
+    /*/Estrutura De Decisão com if/ELSE*/
+    IF primeiroNumero > segundoNumero
+        somaNumeros := primeiroNumero + segundoNumero
+    Else
+        somaNumeros := segundoNumero - primeiroNumero
+    EndIF
+
+    somaNumeros := IF(primeiroNumero > segundoNumero, primeiroNumero + segundoNumero,;
+    segundoNumero - primeiroNumero)
+
+    IF primeiroNumero > segundoNumero 
+        fwAlertInfo('Primeiro número é maior')
+    ElseIf primeiroNumero = segundoNumero
+        FWAlertWarning('Números iguais')
+    ElseIf segundoNumero < primeiroNumero
+        fwAlertInfo('Primeiro número é menor')
+    Else 
+        fwAlertError('ERROR')
+    EndIF
+
+    DO CASE 
+        CASE primeiroNumero > segundoNumero
+            fwAlertInfo('Primeiro número é maior')
+        CASE primeiroNumero = segundoNumero
+            FWAlertWarning('Números iguais')
+        OTHERWISE 
+            fwAlertError('Pirmeiro número é menor')
+        ENDCASE
+
+Return 
+

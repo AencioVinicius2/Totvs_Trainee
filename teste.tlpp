@@ -1,0 +1,34 @@
+#include 'totvs.ch'
+#include 'fwmvcdef.ch'
+#define DATA_DO_DIA date()
+ /*/{protheus.doc} User Function TESTE
+    Exemplo de descricao de funcao
+    @type Function
+    @autor Aencio Vinicius
+    @since 19/1/2024
+    @version 
+ 
+ */
+
+ //-- AREA DE DECLARACAO DE FUNCAO
+ User Function TESTE
+
+    //-- AREA DE AJUSTES INICIAIS 
+    Local dData := DATA_DO_DIA
+    Local nOpc  := 1
+    Local lret := .T.
+
+    //-- CORPO DO PROGRAMA
+    IF dData = date()
+        nOpc := 2
+    Else 
+        Return .F. //-- AREA DE ENCERRAMENTO
+    EndIF
+
+//-- AREA DE ENCERRAMENTO
+Return lret
+    
+
+
+
+

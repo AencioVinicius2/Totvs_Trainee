@@ -1,0 +1,31 @@
+/*/{Protheus.doc} User Function U_ESCOPOS
+    (long_description)
+    @type  Function
+    @author user
+    @since 19/01/2024
+    @version version
+    @param param_name, param_type, param_descr
+    @return return_var, return_type, return_description
+    @example
+    (examples)
+    @see (links_or_references)
+    /*/
+User Function U_ESCOPOS(param_name)
+    mostralog()
+Return
+
+/*/{Protheus.doc} mostralog
+    (long_description)
+    @type  Static Function
+    @author user
+    @since 19/01/2024
+    @version version
+    @param param_name, param_type, param_descr
+    @return return_var, return_type, return_description
+    @example
+    (examples)
+    @see (links_or_references)
+/*/
+Static Function mostralog()
+    Conout('Log teste')
+Return 

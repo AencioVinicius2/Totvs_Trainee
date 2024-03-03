@@ -1,0 +1,99 @@
+#include 'totvs.ch'
+
+/*/{Protheus.doc} U_OPERADORES
+(long_description)
+@type user function
+@author Aencio
+@since 24/01/2024
+/*/
+Function U_OPERADORES(parametro)
+
+    default parametro := 10
+
+    //-- OPERADORES DE ATRIBUIÇÃO
+    numero := 10 //-- ATRIBUIÇÃO SIMPLES 
+    numero += 20 //-- SOMA E ATRIBUI
+    numero -= 20 //-- SUBTRAI E ATRIBUI
+    numero *= 10 //-- MULT E ATRIBUI
+    numero /= 10 //-- DIVIDE E ATRIBUI
+
+    //##OPERADORES COMUNS**//
+    numero := 10
+    numero := numero + 20
+    numero := numero - 20
+    numero := numero * 10
+    numero := numero / 10
+    numero := numero ** 10
+    numero := numero % 10
+
+    //*OPERADORES LOGICOS *//
+
+    nome = 'ZZZ'
+    lret := nome = 'ZZZ'
+    lret := nome == 'ZZZ'
+    lret := numero > 10
+    lret := numero < 10
+    lret := numero >= 10
+    lret := numero <= 10
+    lret := numero <> 10
+    lret := numero != 10
+    lret := ! numero = 10
+    lret := .not. numero = 10
+    lret := numero > 10 .and. numero < 100
+    lret := numero > 10 .or. numero < 100
+
+    //-- OPERADORES COM TEXTO *//
+    nome := 'Aencio'
+    sobrenome := 'Vinicius'
+    nome_completo := nome + sobrenome
+    nome_completo += sobrenome
+    nome_completo := nome
+    nome_completo -= sobrenome
+    lret := nome $ nome_completo
+    lret := sobrenome $ nome_completo
+
+    //-- OPERADORES COM DATA *//
+    data_login := date()
+    data_login += 10
+    data_login -= 10
+
+    //## OPERADORES INCRMENTAIS E DECREMENTAIS ++ -- /*/
+    total := 10
+    numero := 10
+
+    /*/INCREMENTOS E DECREMENTOS PREFIXADOS/*/
+    total := ++numero + 10
+    total1 := --numero - 10
+
+    total := numero++ + 10
+    total1 := numero-- - 10
+
+    //--#OPERADORES ESPECIAIS
+
+    //--OPERADOR DE APELIDO: USADO PARA RELACIONAR UM CAMPO A UMA TABELA OU AREA DA MEMORIA
+    M->XA1_COD := ''//SA1->A1_COD
+
+    //--() OPERADOR DE AGRUPAMENTO OU FUNCAO
+
+    (total1 := numero + parametro, total2 := numero - parametro * 2)
+
+    // & OPERADOR DE MICROSUBSTITUICAO
+    total := &('numero') + 10
+
+    // {} DEFINICAO DE MATRIZ OU BLOCO DE CODIGO
+    lista_numeros := {10,20,30,40}
+    bloco := {|| fwAlertInfo('ok')}
+
+    // @passagem de parametro por referencia
+    numero := 10
+    soma_numeros(@numero,parametro)
+
+    nome_completo := 'klaus' +;
+    'vinicius'
+    
+Return
+
+Static Function som_numeros(n1,n2)
+    p1 := p1 * p2
+    p2 := p1
+Return 

@@ -1,0 +1,43 @@
+#include 'totvs.ch'
+
+/*/{Protheus.doc} ESTRUTURA_DE_REPETICAO
+@type user function
+@author user
+/*/
+Function U_ESTRUTURA_DE_REPETICAO()
+    Local x 
+    Local nFor := 100
+    Local nWhile := 59
+
+    //-- WHILE => REPETICOES ENQUANTO UMA CONDICAO NAO É ATENDIDA
+    While nWhile > 0
+        nWhile--
+
+        IF nWhile = 20
+            nWhile := 10
+            Loop
+            nWhile := 20
+        EndIF 
+
+        IF nWhile = 59
+            Exit
+        EndIF
+
+    Enddo
+
+    //-- FOR NEXT -> REPETICOES DE ACORDO COM UM NUMERO DEFINIDO DE EXECUCOES
+    For x := 1 To nFor Step 1
+
+        IF nWhile = 20
+            nWhile += 10
+            Loop
+        EndIF
+
+        IF nWhile > 60
+            Exit
+        EndIF   
+
+        nWhile++   
+    Next
+
+Return
